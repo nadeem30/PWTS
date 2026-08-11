@@ -12,6 +12,8 @@ await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/lo
 await page.getByPlaceholder('Username').fill('Admin');
 await page.getByPlaceholder('Password').fill('admin123');
 await page.getByRole('button', {name: 'Login'}).click();
+await page.waitForTimeout(5000);
+
 
 await page.goto('https://www.testmuai.com/selenium-playground/input-form-demo/');
 await page.getByTitle('Hello, have a question? Let’s chat.').click();
