@@ -28,11 +28,10 @@ await page.waitForTimeout(5000);
 //await page.screenshot({path: 'C:/Playwright/PWTS/screenshots/HKviewport.png'});
 
 //fullpage
-//await page.screenshot({path: 'C:/Playwright/PWTS/screenshots/HKfullpage.png', fullPage:true});
+await page.screenshot({path: 'HKfullpage.png', fullPage:true});
 
 //Element Screenshot
-const ele= await page.getByAltText('HackerRank logo with the wordmark "HackerRank" and a green rectangle after "Rank"');
-await ele.screenshot({path: 'C:/Playwright/PWTS/screenshots/HKelement.png'});
-
+// const ele= await page.getByAltText('HackerRank logo with the wordmark "HackerRank" and a green rectangle after "Rank"');
+// await ele.screenshot({path: HKelement.png'});
 
 })
