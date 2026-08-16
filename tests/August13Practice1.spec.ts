@@ -9,7 +9,12 @@ test('screenshot test', async ({page})=>{
 //   await dialog.accept();
 //   })
 
-await page.getByText('Accept All').click();
+//await page.getByText('Accept All').click();
+
+const acceptBtn = page.getByText('Accept All', { exact: false });
+if (await acceptBtn.isVisible({ timeout: 5000 }).catch(() => false)) {
+  await acceptBtn.click();
+}
 const ele=page.getByAltText('Mohammad Nabi finished with four wickets, Jamaica Kingsmen vs Guyana Amazon Warriors, CPL 2026, Kington, August 13, 2026');
 await ele.screenshot({path: 'nabi.png'});
 
