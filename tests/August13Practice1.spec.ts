@@ -2,7 +2,7 @@ import {test, expect} from '@playwright/test';
 
 test('screenshot test', async ({page})=>{
 
-  await page.goto('https://www.cricinfo.com/');
+  await page.goto('https://www.google.com/');
   await page.waitForTimeout(7000);
   page.on('dialog', async dialog=>{
   console.log(await dialog.message());  
@@ -16,9 +16,9 @@ if (await acceptBtn.isVisible({ timeout: 5000 }).catch(() => false)) {
   await acceptBtn.click();
 }
 const image = page.locator(
-  'img[src="https://wassets.hscicdn.com/static/images/v2/logo.svg"]'
+  'svg[class="ESTs9d"]'
 );
-await image.screenshot({path: 'cricinfo.png'});
+await image.screenshot({path: 'google.png'});
 
 
 
